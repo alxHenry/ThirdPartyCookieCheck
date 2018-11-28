@@ -7,4 +7,6 @@ if (document.cookie.indexOf(testCookie) > -1) {
 } else {
   console.log("Cookie set failure!");
   window.parent.postMessage("failure", "*");
+
+  window.open("https://alxhenry.github.io/ThirdPartyCookieCheck/");
 }
