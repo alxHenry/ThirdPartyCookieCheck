@@ -3,11 +3,24 @@
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
-  <script type="text/javascript" src="./index.js" async></script>
+  <title>Third Party Cookie Check</title>
 </head>
 
 <body>
+  <script type="text/javascript">
+    var testCookie = "thirdPartyCookieCheck=true";
+
+    document.cookie = testCookie;
+    if (document.cookie.indexOf(testCookie) > -1) {
+      console.log("Cookie set successfully!");
+      window.parent.postMessage("success", "*");
+    } else {
+      console.log("Cookie set failure!");
+      window.parent.postMessage("failure", "*");
+
+      window.open("https://alxhenry.github.io/ThirdPartyCookieCheck/");
+    }
+  </script>
 </body>
 
 </html>
