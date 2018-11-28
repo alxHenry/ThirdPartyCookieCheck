@@ -13,14 +13,10 @@
     document.cookie = testCookie;
     if (document.cookie.indexOf(testCookie) > -1) {
       console.log("Cookie set successfully!");
-      debugger;
       window.parent.postMessage("success", "*");
     } else {
       console.log("Cookie set failure!");
-      debugger;
       window.parent.postMessage("failure", "*");
-
-      window.open("https://alxhenry.github.io/ThirdPartyCookieCheck/");
     }
   </script>
 </body>
