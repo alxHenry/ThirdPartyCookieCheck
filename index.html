@@ -13,12 +13,10 @@
     document.cookie = testCookie;
     if (document.cookie.indexOf(testCookie) > -1) {
       console.log("Cookie set successfully!");
-      debugger;
-      window.parent.postMessage("success", "https://yammer.com");
+      window.parent.postMessage("success", "https://www.yammer.com");
     } else {
       console.log("Cookie set failure!");
-      debugger;
-      window.parent.postMessage("failure", "https://yammer.com");
+      window.parent.postMessage("failure", "https://www.yammer.com");
     }
   </script>
 </body>
